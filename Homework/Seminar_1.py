@@ -1,4 +1,3 @@
-# Знакомство с языком Python (семинары)
 # Урок 1. Ввод-Вывод, операторы ветвления
 
 # Задача 2: Найдите сумму цифр трехзначного числа.
@@ -6,38 +5,37 @@
 # 123 -> 6 (1 + 2 + 3)
 # 100 -> 1 (1 + 0 + 0) |
 
-# print("---Задача 2: Найдите сумму цифр трехзначного числа.---")
-
-# number = int(input("Введите число: "))
-# sum=0
-# while number > 0:
-#     sum =sum+ (number % 10)
-#     numberпше=number//10
-# print(sum)
+print("---Задача 2: Найдите сумму цифр трехзначного числа.---")
+number = int(input("Введите число: "))
+sum=0
+while number > 0:
+    sum =sum+ (number % 10)
+    number=number//10
+print(f'Ответ: {sum}')
 print("---")
 
 # Задача 4: Петя, Катя и Сережа делают из бумаги журавликов.
 # Вместе они сделали S журавликов. Сколько журавликов сделал каждый ребенок, если известно,
 # что Петя и Сережа сделали одинаковое количество журавликов,
 # а Катя сделала в два раза больше журавликов, чем Петя и Сережа вместе?
+
 # *Пример:*
 # 6 -> 1  4  1
 # 24 -> 4  16  4
 #     60 -> 10  40  10
 #     7 -> "нельзя определить"
 
-# print("---Задача 4: Петя, Катя и Сережа делают из бумаги журавликов.---")
-# total_toys = int(input("Введите колличество журавликов: "))
+print("---Задача 4: Найти сколько журавликов сделал каждый ребенок.---")
 
-# katja_toys = total_toys*2/3
-# petja_toys = (total_toys - katja_toys)/2
-# sereja_toys = petja_toys
+total_toys = int(input("Введите колличество журавликов: "))
+katja_toys = total_toys*2/3
+petja_toys = (total_toys - katja_toys)/2
+sereja_toys = petja_toys
 
-
-# if katja_toys == int(katja_toys) and petja_toys == int(petja_toys):
-#     print(f"{(total_toys)} -> {petja_toys} {katja_toys} {sereja_toys}")
-# else:
-#     print("нельзя определить")
+if katja_toys == int(katja_toys) and petja_toys == int(petja_toys):
+    print(f"Общее {(total_toys)} -> Петя = {petja_toys} Катя = {katja_toys} Сергей = {sereja_toys}")
+else:
+    print("нельзя определить")
 print("---")
 
 # Задача 6: Вы пользуетесь общественным транспортом? Вероятно, вы расплачивались за проезд и получали билет с номером.
@@ -49,24 +47,25 @@ print("---")
 # 385916 -> yes
 # 123456 -> no
 
-# print("--- Задача 6: Счастливый билет ---")
+print("--- Задача 6: Определить являится ли номер билета счастливым ---")
 
-# lucky_number = int(input("Введите номер билета: "))
-# i = 0
-# first3_value = lucky_number//1000
-# first3_sum_value = 0
-# second3_sum_value = 0
-# while i < 3:
-#     first3_sum_value += first3_value % 10
-#     first3_value //= 10
-#     second3_sum_value += lucky_number % 10
-#     lucky_number //= 10
-#     i += 1
+lucky_number = int(input("Введите номер билета: "))
+i = 0
+first3_value = lucky_number//1000
+first3_sum_value = 0
+second3_sum_value = 0
+while i < 3:
+    first3_sum_value += first3_value % 10
+    first3_value //= 10
+    second3_sum_value += lucky_number % 10
+    lucky_number //= 10
+    i += 1
 
-# if first3_sum_value == second3_sum_value:
-#     print("yes")
-# else:
-#     print("No")
+if first3_sum_value == second3_sum_value:
+    print("Ответ: yes")
+else:
+    print("Ответ: No")
+print("---")
 
 # Задача 8: Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек,
 # если разрешается сделать один разлом по прямой между дольками (то есть разломить шоколадку на два прямоугольника).
@@ -83,5 +82,5 @@ lenght = int(input("Введите длину шоколадки: "))
 width = int(input("Введите ширину шоколадки: "))
 slice = int(input("Сколько долек отломить: "))
 
-if slice%lenght==0 or slice%width==0: print("yes")
-else: print("no")
+if slice%lenght==0 or slice%width==0: print("Ответ: yes")
+else: print("Ответ: no")
