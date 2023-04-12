@@ -13,5 +13,6 @@ lenght = int(input("Введите длину шоколадки: "))
 width = int(input("Введите ширину шоколадки: "))
 slice = int(input("Сколько долек отломить: "))
 
-if slice%lenght==0 or slice%width==0: print("Ответ: yes")
+if slice<lenght*width and (slice%lenght==0 or slice%width==0): print("Ответ: yes")
+if slice>=lenght*width: print("Шоколадку не разделить, долек больше!") 
 else: print("Ответ: no")
