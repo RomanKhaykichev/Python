@@ -10,20 +10,20 @@
 
 number_coins = int(input("Введите колличество монет: "))
 
-# flag=False
-# while not flag:
-#     coins =int(input("Error"))
-#     if not(coins==0 or coins==1):
-#         flag=True
-
+print("Введите 1 или 0, где решка=1, герб=0.")
 
 sum_eagle = 0
 sum_tails = 0
 for i in range(number_coins):
     coins = int(input(f"Монета {i+1}: "))
-    if coins==0: sum_eagle +=1
-    if coins==1: sum_tails +=1
+    if coins == 0:
+        sum_eagle += 1
+    if coins == 1:
+        sum_tails += 1
 
-if sum_eagle>sum_tails: print(f"Нужно перевернуть: {sum_eagle}")
-if sum_eagle==sum_tails: print(f"Можно перевернуть монеты с решкой или гербом!")
-else: print(f"Нужно перевернуть: {sum_tails}")
+if sum_eagle < sum_tails:
+    print(f"Нужно перевернуть {sum_eagle} монеты с гербом.")
+if sum_eagle > sum_tails:
+    print(f"Нужно перевернуть {sum_tails} монеты с решкой.")
+if sum_eagle == sum_tails:
+    print(f"Можно перевернуть {sum_eagle} монеты с решкой или {sum_tails} c гербом!")
