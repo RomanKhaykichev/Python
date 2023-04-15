@@ -6,6 +6,6 @@
 
 n=int(input("Введите число: "))
 i=0
-while i**2<=n:
+while 2**i<=n:
     print(2**i)
     i+=1
