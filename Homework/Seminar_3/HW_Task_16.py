@@ -7,3 +7,26 @@
 #     1 2 3 4 5
 #     3
 #     -> 1
+
+n = int(input("Длина массива: "))
+array = []
+
+for i in range(n):
+    num = int(input(f"Число {i+1}: "))
+    array.append(num)
+    # array.append(i)
+print(f"Массив => {array}")
+
+x = int(input("Введите число X: "))
+count = 0
+
+# Ver_1
+for i in range(n):
+    if array[i] == x:
+        count+=1
+if count==0: print("Число Х отсутствует.")
+else: print(f"Ответ: {count}")
+
+# Ver_2
+result2=[array[i] for i in range(n) if array[i] == x]
+print(f"Ответ - Ver_2: {len(result2)}")
