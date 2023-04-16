@@ -18,15 +18,23 @@ for i in range(n):
 print(f"Массив => {array}")
 
 x = int(input("Введите число X: "))
-count = 0
 
 # Ver_1
+count = 0
 for i in range(n):
     if array[i] == x:
-        count+=1
-if count==0: print("Число Х отсутствует.")
-else: print(f"Ответ: {count}")
+        count += 1
+if count == 0:
+    print("Число Х отсутствует.")
+else:
+    print(f"Ответ: {count}")
 
 # Ver_2
-result2=[array[i] for i in range(n) if array[i] == x]
-print(f"Ответ - Ver_2: {len(result2)}")
+result2 = 0
+for i in range(n):
+    result2 = array.count(x)
+print(f"Ответ (Ver_2): {result2}")
+
+# Ver_3
+result3 = [array[i] for i in range(n) if array[i] == x]
+print(f"Ответ (Ver_3): {len(result3)}")
