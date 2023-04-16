@@ -1,4 +1,6 @@
 # Information
+*Python FLake 8 - ориентир  (скачать)*
+
 **from random import randint** - рандомное число
 
 **Flag**
@@ -10,6 +12,8 @@
 ```
 
 **raise**-ошибка
+
+**print(..., end=' ')** - печать в строку
 ___
 
 | Тип коллекции | Создание |
