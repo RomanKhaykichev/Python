@@ -29,7 +29,7 @@ for i in range(len(array)):
     if x-array[i] < 0 and dif >= array[i]-x:
         dif = array[i]-x
         result = array[i]
-print(f"Ответ (Ver_2): {result}")
+print(f"Ответ (Ver_1): {result}")
 
 # Ver_2
 result2=[array[i] for i in range(len(array))
