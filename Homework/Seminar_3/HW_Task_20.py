@@ -13,22 +13,31 @@
 # ноутбук
 #     12
 
-dictionary = [{'A, E, I, O, U, L, N, S, T, R': '1',
-              'D, G': '2', 'B, C, M, P': '3', 'F, H, V, W, Y ': '4',
-              'K': '5', 'J, X': '8', 'Q, Z': '10'}]
+dictionary = {'A, E, I, O, U, L, N, S, T, R': '1',
+              'D, G': '2', 'B, C, M, P': '3', 'F, H, V, W, Y': '4',
+              'K': '5', 'J, X': '8', 'Q, Z': '10',
+              'А, В, Е, И, Н, О, Р, С, Т': '1',
+              'Д, К, Л, М, П, У ': '2', 'Б, Г, Ё, Ь, Я': '3', 'Й, Ы': '4',
+              'Ж, З, Х, Ц, Ч': '5', 'Ш, Э, Ю': '8', 'Ф, Щ, Ъ': '10'
+              }
 # key=A...
 # dictionary[key]=1
-word = 'HELLO'
 
-arr_number=0
+word = str.upper(input("Введите слово: "))
+arr_number = 0
 
+# Ver_1
 for key in dictionary:
-    for i in key:
-        for j in word:
-            if word ==key[i]:
-                arr_number+=int(dictionary[key])
-                print(arr_number)
+    for i in range(len(key)):
+        for j in range(len(word)):
+            if key[i] == word[j]:
+                arr_number += int(dictionary[key])
+print("Ответ:", arr_number, "очков")
 
-        # if key[i]
-        # print(dictionary[key])
-       
+# Ver_2
+arr_number_2 = [int(dictionary[key])
+                for key in dictionary
+                for i in range(len(key))
+                for j in range(len(word))
+                if key[i] == word[j]]
+print("Ответ Ver_2:", sum(arr_number_2), "очков")
