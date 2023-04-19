@@ -11,6 +11,11 @@
 n = int(input("Длина массива: "))
 array = []
 
+# рандомное число
+# from random import randint
+# array=[randint(1,10) for i in range(n)]
+# print(array)
+
 for i in range(n):
     num = int(input(f"Число {i+1}: "))
     array.append(num)
