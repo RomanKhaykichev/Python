@@ -4,13 +4,13 @@
 # Затем пользователь вводит сами элементы множеств.
 
 # from random import randint
-n = int(input("Колличество элементов 1-го массива: "))
-m = int(input("Колличество элементов 2-го массива: "))
+# n = int(input("Колличество элементов 1-го массива: "))
+# m = int(input("Колличество элементов 2-го массива: "))
 array_1 = input("Введите набор цифр в строку через пробел: ").split()
 array_2 = input("Введите набор цифр в строку через пробел: ").split()
-if len(array_1) != n and len(array_2) != m:
-    print("<< Введено не корректное колличество цифр >>")
-    raise
+# if len(array_1) != n and len(array_2) != m:
+#     print("<< Введено не корректное колличество цифр >>")
+#     raise
 
 # array_1 = [randint(1, 10) for i in range(n)]
 # array_2 = [randint(1, 10) for i in range(m)]

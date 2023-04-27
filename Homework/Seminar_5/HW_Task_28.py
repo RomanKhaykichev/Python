@@ -6,3 +6,13 @@
 
 # 2 2
 #     4
+
+def sum(a: int, b: int) -> int:
+    """Сумма a и b"""
+    if a == 0:
+        return b
+    return sum(a-1, b+1)
+
+a=int(input("Введите число: "))
+b=int(input("Введите число: "))
+print(f"Сумма: {sum(a,b)}")

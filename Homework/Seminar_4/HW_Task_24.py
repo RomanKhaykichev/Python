@@ -17,8 +17,9 @@ berry = [randint(1, 10) for i in range(n_bush)]
 print(berry)
 max = 0
 
-for _ in range(n_bush-1):
+for _ in range(n_bush):
     if (sum(berry[0:3])) > max:
         max = sum(berry[0:3])
+    print(berry[0:3])
     berry.insert(0, berry.pop())
 print("Ответ: ", max)
