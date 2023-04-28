@@ -19,11 +19,11 @@ def friendly_number(num: int)->int:
   sum_1=0
   for i in k:
     for j in i:
-      if i%j!=0:
+      if i%j==0:
         sum+=j
     for i in sum:
         for j in i:
-          if i%j!=0:
+          if i%j==0:
             sum+=j
     if sum==sum_1:
       print(sum,sum_1)
