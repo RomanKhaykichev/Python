@@ -10,3 +10,22 @@
 # 220(1, 2, 4, 5, 10, 11, 20, 22, 44, 55 и 110 сумма делителей равна 284) 284(1, 2... 142 сумма делителей равна 220)
 
 # 1184 1210
+
+k=1220
+
+def friendly_number(num: int)->int:
+  """нахождение дружественных чисел"""
+  sum=0
+  sum_1=0
+  for i in k:
+    for j in i:
+      if i%j!=0:
+        sum+=j
+    for i in sum:
+        for j in i:
+          if i%j!=0:
+            sum+=j
+    if sum==sum_1:
+      print(sum,sum_1)
+      
+friendly_number(k)
