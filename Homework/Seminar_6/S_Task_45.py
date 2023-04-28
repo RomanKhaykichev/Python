@@ -18,14 +18,14 @@ def friendly_number(num: int)->int:
   sum=0
   sum_1=0
   for i in k:
-    for j in i:
+    for j in i/2:
       if i%j==0:
         sum+=j
-    for i in sum:
+    for i in sum/2:
         for j in i:
           if i%j==0:
-            sum+=j
-    if sum==sum_1:
+            sum_1+=j
+    if i==sum_1:
       print(sum,sum_1)
       
 friendly_number(k)
