@@ -11,3 +11,27 @@
 
 # 1184 1210
 
+# Ver_1
+def sum_del(num: int) -> int:
+    """нахождение суммы делителей числа"""
+    sum=0
+    for i in range(1,num//2+1):
+        if num%i==0:
+            sum+=i
+    return sum
+
+enter_num=int(input("Введите число: "))
+
+for i in range(enter_num):
+    friendly_num=sum_del(i)
+    if sum_del(friendly_num)==i and i<friendly_num:
+        print(i,friendly_num)
+
+#Ver_2
+counter=[]
+for i in range(enter_num):
+    b=sum([k for k in range(1,i) if i%k==0])
+    if i== sum([k for k in range(1,b) if b%k==0]) and b!=i:
+        counter.append(i)
+
+print(f"Ver_2 => {counter}")
