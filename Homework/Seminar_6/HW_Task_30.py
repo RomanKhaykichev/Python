@@ -21,3 +21,7 @@ a=int(input("Введите 1-ый элемент массива: "))
 d=int(input("Введите разность: "))
 n=int(input("Введите колличество элементов массива: "))
 array(a,d,n)
+
+# Ver_2
+progression=[a + (i-1) * d for i in range(1,n+1)]
+print(progression)
