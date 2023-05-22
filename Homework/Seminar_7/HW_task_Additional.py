@@ -8,7 +8,7 @@
 
 # *Пример:*
 
-# **Ввод:** `print_operation_table(lambda x, y: x * y) ` 
+# **Ввод:** `print_operation_table(lambda x, y: x * y) `
 # **Вывод:**
 # 1 2 3 4 5 6
 # 2 4 6 8 10 12
@@ -16,3 +16,14 @@
 # 4 8 12 16 20 24
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
+
+def print_operation_table(operation,num_rows=6, num_columns=6)->list:
+    '''выод матрицы, согласно заданной функции'''
+    array=[]
+    for i in range(1, num_columns+1):
+        for j in range(1, num_rows+1):
+            array.append(operation (i,j))
+        print(list(array))
+        array=[]
+
+print_operation_table(lambda x,y:x*y)
