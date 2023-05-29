@@ -17,13 +17,14 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-def print_operation_table(operation,num_rows=6, num_columns=6)->list:
-    '''выод матрицы, согласно заданной функции'''
+def print_operation_table(operation,num_rows, num_columns):
+    '''вывод матрицы, согласно заданной функции'''
     array=[]
     for i in range(1, num_columns+1):
         for j in range(1, num_rows+1):
-            array.append(operation (i,j))
-        print(list(array))
-        array=[]
+            print(operation(i, j), end = " ")
+        print()
 
-print_operation_table(lambda x,y:x*y)
+num_rows=int(input('Enter number of rows: '))
+num_columns=int(input('Enter number of columns: '))
+print_operation_table((lambda x, y: x * y), num_rows, num_columns)

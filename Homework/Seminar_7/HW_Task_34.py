@@ -8,5 +8,18 @@
 
 # *Пример:*
 
-# **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
-#     **Вывод:** Парам пам-пам  
+# **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да
+#     **Вывод:** Парам пам-пам
+
+# frase = ('пара-ра-рам рам-пам-папам па-ра-па-да')
+dictionary = ('а, и, о, у, ы, э, е, ё, ю, я')
+
+frase=input('Enter the frase: ')
+vowels=[list(filter(lambda char: char in dictionary,i)) for i in frase.split()]
+count_vowels=set(map(lambda count:len(count),vowels))
+if len(count_vowels)==1 : print('Парам пам-пам')
+else: print('Пам парам')
+
+
+
+
