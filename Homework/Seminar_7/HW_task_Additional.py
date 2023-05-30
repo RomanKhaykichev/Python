@@ -17,7 +17,7 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-def print_operation_table(operation,num_rows, num_columns):
+def print_operation_table(operation,num_rows=6, num_columns=6):
     '''вывод матрицы, согласно заданной функции'''
     array=[]
     for i in range(1, num_columns+1):
