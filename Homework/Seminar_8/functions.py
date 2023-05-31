@@ -29,7 +29,9 @@ def search(book: list[str], info: str) -> list[str] | str:
         return 'Совпадений не найдено'
     elif len(result)==1:
         print('---------')
-        return result
+        print('\n'.join(result))
+        print('---------')
+        return result[0]
     elif len(result)>1:
         print('---------')
         print('\n'.join(result))
@@ -49,7 +51,7 @@ def change_data() -> None:
     fio = input('Введите ФИО: ')
     phone_num = input('Введите номер телефона: ')
     data[data.index(contact_to_change)] = f'{fio} | {phone_num}'
-    with open('book.txt', 'w', encoding='utf-8') as file:
+    with open('Homework//Seminar_8//book.txt', 'w', encoding='utf-8') as file:
         file.write('\n'.join(data))
 
 
@@ -64,3 +66,21 @@ def delete_data() -> None:
     data.remove(contact_to_delete)
     with open('Homework//Seminar_8//book.txt', 'w', encoding='utf-8') as file:
         file.write('\n'.join(data))
+
+# позволяет редактировать отдельно ФИО и номер телефона
+
+def enter_contact(contact:str)->str:
+    """Ввод и изменение контакта (фамилия_телефон)"""
+    new_fio=input("Введите ФИО: ")
+    new_phone=input("Введите номер телефона: ")
+
+    old_fio=contact.split(" | ")[0]
+    old_phone=contact.split(" | ")[1]
+
+    if len(new_fio)>0 and len(new_phone)>0:
+        return f'{new_fio} | {new_phone}'
+    elif not new_phone and len(new_fio)>0:
+        return f'{new_fio} | {old_phone}'
+    elif not new_fio and len(new_phone)>0:
+        return f'{old_fio} | {new_phone}'
+    return f'{old_fio} | {old_phone}'
