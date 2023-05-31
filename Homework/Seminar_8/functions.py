@@ -15,7 +15,7 @@ def add_data() -> None:
 def find_data() -> None:
     """Печатает результат поиска по справочнику."""
     with open('Homework//Seminar_8//book.txt', 'r', encoding='utf-8') as file:
-        data = file.read()
+        data = file.read().split('\n')
     contact_to_find = input('Введите, что хотите найти: ')
     result = search(data, contact_to_find)
     print(result)
@@ -48,9 +48,7 @@ def change_data() -> None:
         print('---------')
     contact_to_change = input('Введите, данные для изменения:  ')
     contact_to_change = search(data, contact_to_change)
-    fio = input('Введите ФИО: ')
-    phone_num = input('Введите номер телефона: ')
-    data[data.index(contact_to_change)] = f'{fio} | {phone_num}'
+    data[data.index(contact_to_change)] = enter_contact(contact_to_change)
     with open('Homework//Seminar_8//book.txt', 'w', encoding='utf-8') as file:
         file.write('\n'.join(data))
 
